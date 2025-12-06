@@ -1,0 +1,39 @@
+{
+  "title": "Candidate Evaluation Input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "resume_file": {
+      "type": "object",
+      "title": "Resume File",
+      "description": "Upload the candidate's resume (PDF or DOCX).",
+      "editor": "file",
+      "isRequired": true,
+      "properties": {
+        "name": {
+          "type": "string",
+          "title": "File Name"
+        },
+        "url": {
+          "type": "string",
+          "title": "File URL"
+        }
+      }
+    },
+    "job_description": {
+      "type": "string",
+      "title": "Job Description",
+      "description": "Paste the job description text for evaluation.",
+      "editor": "textarea",
+      "prefill": "Looking for a Python backend engineer with experience in Django, FastAPI, Docker, and AWS."
+    },
+    "geminiApiKey": {
+      "type": "string",
+      "title": "Gemini API Key",
+      "description": "Optional: Provide your Google Gemini API Key for advanced AI analysis.",
+      "editor": "textfield",
+      "isSecret": true
+    }
+  },
+  "required": ["resume_file"]
+}

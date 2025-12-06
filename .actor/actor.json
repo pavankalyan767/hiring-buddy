@@ -1,13 +1,11 @@
 {
-    "actorSpecification": 1,
-    "name": "hiring-buddy",
-    "title": "Empty Python project",
-    "description": "Empty project in Python.",
-    "version": "0.0",
-    "buildTag": "latest",
-    "meta": {
-        "templateId": "python-empty",
-        "generatedBy": "<FILL-IN-MODEL>"
-    },
-    "dockerfile": "../Dockerfile"
+  "actorSpecification": 1,
+  "name": "candidate-evaluator",
+  "version": "0.1",
+  "buildTag": "latest",
+  "dockerfile": "../Dockerfile",
+  "readme": "./README.md",
+  "input": "./input_schema.json",
+  "output": "./output_schema.json",
+  "secrets": ["geminiApiKey"]
 }

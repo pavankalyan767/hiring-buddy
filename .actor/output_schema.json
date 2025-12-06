@@ -1,0 +1,25 @@
+{
+  "actorOutputSchemaVersion": 1,
+  "title": "Candidate Evaluation Output",
+  "type": "object",
+  "properties": {
+    "candidate_summary": {
+      "title": "Candidate Summary",
+      "type": "string",
+      "description": "JSON string containing full candidate evaluation, including resume, GitHub, JD fit, and final score.",
+      "template": "{{{ JSON.stringify(output) }}}"
+    },
+    "visualization": {
+      "title": "Optional Visualization",
+      "type": "string",
+      "description": "URL to a visualization image (if generated).",
+      "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/visualization.png"
+    },
+    "report": {
+      "title": "Optional Report",
+      "type": "string",
+      "description": "URL to a detailed HTML report (if generated).",
+      "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/report.html"
+    }
+  }
+}
